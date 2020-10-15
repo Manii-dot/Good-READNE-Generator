@@ -18,11 +18,11 @@ const questions = [{
     },{
     type: "input",
     name: "Installation",
-    message: "What is the installation?"
+    message: "What is the installation instruction?"
     },{
         type: "input",
         name: "Usage",
-        message: "How much was the usage?"
+        message: "What is the usage information?"
         },{
         type: "input",
         name: "License",
