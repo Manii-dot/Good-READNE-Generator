@@ -48,7 +48,7 @@ const questions = [{
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, JSON.stringify(data), function(err){
+    fs.writeToFile(fileName,data, err =>{
         if (err){
             console.log("Oops! do it again!")
         } else {

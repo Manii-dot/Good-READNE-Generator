@@ -18,7 +18,7 @@ function generateMarkdown(data) {
   # Questions
   ${data.Questions}
   #Git_Hub
-  ${data.Git_Hub}
+  Github: [https://github.com${data.username}]
 
 `;
 }
