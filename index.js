@@ -10,7 +10,7 @@ const license = ["Apache License 2.0",
     "Mozilla Public License 2.0",
     "Common Development and Distribution License",
     "Eclipse Public License version 2.0"];
-    
+
 // array of questions for user
 const questions = [{
     type: "input",
@@ -29,35 +29,35 @@ const questions = [{
     name: "Installation",
     message: "What is the installation instruction?"
     },{
-        type: "input",
-        name: "Usage",
-        message: "What is the usage information?"
-        },{
-        type: "list",
-        name: "License",
-        message: "What type of license is being used?",
-        choices: license
-        },{
-        type: "input",
-        name: "Contributing",
-        message: "If you have contributors, list them?"
+    type: "input",
+    name: "Usage",
+    message: "What is the usage information?"
+    },{
+    type: "list",
+    name: "License",
+    message: "What type of license is being used?",
+    choices: license
+    },{
+    type: "input",
+    name: "Contributing",
+    message: "If you have contributors, list them?"
     }, {
-        type: "input",
-        name: "Test",
-        message: "Can you display a test?"
-        },{
-        type: "input",
-        name: "Question",
-        message: "Do you have any questions to display?"
-        },{
-        type: "input",
-        name: "Git_Hub",
-        message: "What is your Git-Hub username?"
-        },{
-        type: "input",
-        name: "CreatorEmail",
-        message: "What is your email?"
-        }
+    type: "input",
+    name: "Test",
+    message: "Can you display a test?"
+    },{
+    type: "input",
+    name: "Question",
+    message: "Do you have any questions to display?"
+    },{
+    type: "input",
+    name: "GitHub",
+    message: "What is your GitHub username?"
+    },{
+    type: "input",
+    name: "Email",
+    message: "What is your email?"
+    }
     ];
 
 // function to write README file
