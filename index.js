@@ -1,7 +1,16 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
-
+const license = ["Apache License 2.0",
+    "BSD 3-Clause",
+    "BSD 2-Clause", 
+    "GNU General Public License",
+    "GNU Library", "Lesser General Public License (LGPL)",
+    "MIT license",
+    "Mozilla Public License 2.0",
+    "Common Development and Distribution License",
+    "Eclipse Public License version 2.0"];
+    
 // array of questions for user
 const questions = [{
     type: "input",
@@ -24,9 +33,10 @@ const questions = [{
         name: "Usage",
         message: "What is the usage information?"
         },{
-        type: "input",
+        type: "list",
         name: "License",
-        message: "What type of license is being used?"
+        message: "What type of license is being used?",
+        choices: license
         },{
         type: "input",
         name: "Contributing",
@@ -41,14 +51,18 @@ const questions = [{
         message: "Do you have any questions to display?"
         },{
         type: "input",
-        name: "Git-Hub",
+        name: "Git_Hub",
         message: "What is your Git-Hub username?"
+        },{
+        type: "input",
+        name: "CreatorEmail",
+        message: "What is your email?"
         }
     ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeToFile(fileName,data, err =>{
+    fs.writeFile(fileName,data, err =>{
         if (err){
             console.log("Oops! do it again!")
         } else {
